@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MADE TO GO - Beautiful Wallpapers</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+  <style>
+    /* Custom Tailwind animation */
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .menu-slide-down {
+      animation: slideDown 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <!-- Header and Navigation Bar -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto d-flex justify-between items-center p-3">
+      <h1 class="text-xl font-bold text-indigo-600">MADE TO GO</h1>
+      <nav class="d-none d-md-flex space-x-6">
+        <a href="#hero" class="text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
+        <a href="#gallery" class="text-gray-700 hover:text-indigo-600">Gallery</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-indigo-600">Testimonials</a>
+        <a href="#footer" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="btn btn-outline-secondary d-md-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="nav-menu" class="d-md-none hidden bg-gray-100 p-3">
+      <nav class="flex flex-col space-y-3">
+        <a href="#hero" class="text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="#about" class="text-gray-700 hover:text-indigo-600">About</a>
+        <a href="#gallery" class="text-gray-700 hover:text-indigo-600">Gallery</a>
+        <a href="#testimonials" class="text-gray-700 hover:text-indigo-600">Testimonials</a>
+        <a href="#footer" class="text-gray-700 hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+      navMenu.classList.toggle('menu-slide-down');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section id="hero" class="text-white text-center py-20" style="background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);">
+    <div class="bg-black bg-opacity-50 py-20 px-6">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4">MADE TO GO</h2>
+      <p class="text-lg md:text-xl mb-8">Your destination for breathtaking wallpapers. Download and personalize your world with ease.</p>
+      <button class="btn btn-light text-indigo-600 px-4 py-2 font-semibold rounded transition transform hover:scale-105 hover:bg-gray-200">Explore Wallpapers</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto py-20 px-5">
+    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">About Us</h3>
+    <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto">At MADE TO GO, we curate the most stunning wallpapers from around the world. Our mission is to provide a seamless and inspiring platform for users to find and download beautiful, high-quality images for any device.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow rounded-lg hover:shadow-lg transition">
+          <div class="card-body">
+            <h4 class="card-title text-lg font-bold mb-2">Wide Variety</h4>
+            <p class="card-text text-gray-600">Discover a diverse collection of wallpapers, from nature to technology, tailored to suit all tastes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow rounded-lg hover:shadow-lg transition">
+          <div class="card-body">
+            <h4 class="card-title text-lg font-bold mb-2">High Quality</h4>
+            <p class="card-text text-gray-600">Each wallpaper is carefully selected for its clarity and impact, ensuring the best viewing experience.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow rounded-lg hover:shadow-lg transition">
+          <div class="card-body">
+            <h4 class="card-title text-lg font-bold mb-2">Free Downloads</h4>
+            <p class="card-text text-gray-600">All wallpapers on MADE TO GO are free to download and ready for your screen, with no hidden fees.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card shadow rounded-lg hover:shadow-lg transition">
+          <div class="card-body">
+            <h4 class="card-title text-lg font-bold mb-2">Personalization</h4>
+            <p class="card-text text-gray-600">Explore, download, and refresh your devices with personalized images that reflect your unique style.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section id="testimonials" class="bg-gray-200 py-20">
+    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">What Our Users Say</h3>
+    <div class="container mx-auto row g-4 px-5">
+      <div class="col-md-6">
+        <div class="card shadow p-3 rounded-lg hover:shadow-lg transition">
+          <p class="card-text text-gray-700 mb-4">"The variety and quality of wallpapers are fantastic! I always find something new to customize my devices."</p>
+          <span class="text-indigo-600 font-semibold">- Alex Johnson</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow p-3 rounded-lg hover:shadow-lg transition">
+          <p class="card-text text-gray-700 mb-4">"MADE TO GO has become my go-to place for fresh and stunning wallpapers. Highly recommend!"</p>
+          <span class="text-indigo-600 font-semibold">- Sarah Lee</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section id="gallery" class="container mx-auto py-20 px-5">
+    <h3 class="text-2xl font-bold text-center mb-8 text-gray-800">Gallery</h3>
+    <p class="text-center mb-8 text-gray-700 max-w-2xl mx-auto">Explore a selection of our most popular wallpapers below. Click to view and download your favorites for free.</p>
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <img src="PIC/6b1aeca011b3023077586d15ee42af75.jpg" class="img-fluid rounded-lg shadow hover:scale-105 transition" alt="Gallery Image 1">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="PIC/2021 Ford F-150 Gray Off-Road Build.jpg" class="img-fluid rounded-lg shadow hover:scale-105 transition" alt="Gallery Image 2">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="PIC/2175e3005a3d53f6315a7926c363e7ef.jpg" class="img-fluid rounded-lg shadow hover:scale-105 transition" alt="Gallery Image 3">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="PIC/wp7969330-green-ultra-hd-wallpapers.jpg" class="img-fluid rounded-lg shadow hover:scale-105 transition" alt="Gallery Image 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="bg-gray-800 text-white py-10">
+    <div class="container text-center">
+      <p>&copy; 2024 MADE TO GO. All rights reserved.</p>
+      <nav class="mt-4">
+        <a href="#" class="text-gray-300 hover:text-white me-4">Privacy Policy</a>
+        <a href="#" class="text-gray-300 hover:text-white">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+
+</html>
